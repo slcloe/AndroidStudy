@@ -3,10 +3,13 @@ package com.example.hello;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,10 +21,20 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_test;
     private String str;
 
+    ImageView test;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) { //어플을 틀었을 때 처음으로 실행된다
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        test = (ImageView)findViewById(R.id.test);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "우향향좌향향",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         et_test = findViewById(R.id.et_test);
 
