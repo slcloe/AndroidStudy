@@ -6,10 +6,15 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,10 +28,26 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView test;
 
+    private ListView list;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) { //어플을 틀었을 때 처음으로 실행된다
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        list = (ListView)findViewById(R.id.list);
+
+        List<String> data = new ArrayList<>();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,data);
+        list.setAdapter(adapter);
+
+        data.add("pakapaka");
+        data.add("dndnr");
+        data.add("android");
+        adapter.notifyDataSetChanged();  // 이걸써줘야만 저장이됨.
+
+
 
         test = (ImageView)findViewById(R.id.test);
         test.setOnClickListener(new View.OnClickListener() {
