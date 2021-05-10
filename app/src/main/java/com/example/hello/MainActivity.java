@@ -18,7 +18,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
     EditText et_id;
     Button btn_test ;
 
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView test;
 
     private ListView list;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //어플을 틀었을 때 처음으로 실행된다
@@ -47,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         data.add("android");
         adapter.notifyDataSetChanged();  // 이걸써줘야만 저장이됨.
 
-
-
         test = (ImageView)findViewById(R.id.test);
         test.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,19 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
         et_test = findViewById(R.id.et_test);
 
-
         btn_move = findViewById(R.id.btn_move);
         btn_move.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 str = et_test.getText().toString();
                 Intent intent = new Intent(MainActivity.this , SubActivity.class);
-                intent.putExtra("str",str); //subActivity 쪽으로 데이터를 쏴줬다. ( A, B) A는 쏴줄때 데이터를 가리키는 별명 B 는 실제 데이터
+                intent.putExtra("str",str); //subActivity 쪽으로 데이터를 쏴줬다. (A, B) A는 쏴줄때 데이터를 가리키는 별명 B 는 실제 데이터
                 startActivity(intent); // 액티비티 이동.
             }
         });
-
-
 
         et_id = findViewById(R.id.et_id); // et_id 이거랑 xml 에 있는 id 랑 연결
         btn_test = findViewById(R.id.btn_test);
