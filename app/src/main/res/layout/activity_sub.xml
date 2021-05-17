@@ -33,4 +33,23 @@
         android:layout_height="wrap_content"
         android:text="webview" />
 
+    <Button
+        android:id="@+id/btn_customnavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="custom navication bar" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="camera" />
+
+    <Button
+        android:id="@+id/btn_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="recycler view" />
+
+
 </LinearLayout>
