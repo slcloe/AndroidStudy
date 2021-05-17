@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SubActivity">
 
 
@@ -13,5 +14,23 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:text="서브 액티비티 도착"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next" />
+
+    <Button
+        android:id="@+id/btn_sharedPreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sharedPreference" />
+
+    <Button
+        android:id="@+id/btn_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="webview" />
 
 </LinearLayout>
