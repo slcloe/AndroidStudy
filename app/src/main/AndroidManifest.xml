@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello">
-        <activity android:name=".RecyclerViewExample"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".RecyclerViewExample" />
         <activity android:name=".Cameraexample" />
         <activity android:name=".customnavi" />
         <activity android:name=".webviewexample" />
@@ -24,7 +25,7 @@
             android:label="@string/title_activity_navi_example"
             android:theme="@style/Theme.Hello.NoActionBar" />
         <activity android:name=".SubActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".fragment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
