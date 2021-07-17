@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello">
-        <activity android:name=".fragment"></activity>
+        <activity android:name=".BackButtonExample"></activity>
+        <activity android:name=".fragment" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerViewExample" />
         <activity android:name=".Cameraexample" />
@@ -26,22 +27,23 @@
             android:label="@string/title_activity_navi_example"
             android:theme="@style/Theme.Hello.NoActionBar" />
         <activity android:name=".SubActivity" />
-        <activity android:name=".BackButtonExample">
+        <activity android:name=".DialogExample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
-            android:authorities="com.example.hello"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.hello"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
-
     </application>
 
 </manifest>
